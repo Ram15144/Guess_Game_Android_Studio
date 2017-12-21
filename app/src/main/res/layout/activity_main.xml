@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ram.numberguessingthreads.MainActivity">
+
+    <Button
+        android:id="@+id/start"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Guess Game"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="426dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:textSize="15sp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 1 Number:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="74dp"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/winner"
+        android:layout_marginStart="21dp" />
+    <TextView
+        android:id="@+id/Player1no"
+        android:textColor="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView"
+        android:layout_below="@+id/textView"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/Player2no"
+        android:textColor="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:text="" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/PlayerHeading"
+        android:layout_height="80dp"
+        android:layout_below="@id/Player1no"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/Player1Guesses"
+                android:textSize="30sp"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="#996600"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_margin="10dp"
+                android:layout_marginTop="22dp"
+                android:text="Player 1"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_margin="10dp"
+                android:textSize="30sp"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="#996600"
+                android:id="@+id/Player2Guesses"
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:layout_height="58dp"
+                android:layout_alignBaseline="@+id/Player1Guesses"
+                android:layout_alignBottom="@+id/Player1Guesses"
+                android:layout_alignStart="@+id/Player2no"
+                android:text="Player 2"
+                android:layout_weight="0.90" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:textSize="15sp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 2 Number:"
+        tools:layout_editor_absoluteX="230dp"
+        tools:layout_editor_absoluteY="74dp"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignEnd="@+id/winner"
+        android:layout_marginEnd="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/PlayerHeading"
+        android:layout_above="@+id/winner"
+        android:layout_alignParentStart="true">
+
+        <ListView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/Player1Guessesprint"
+            android:layout_marginLeft="3dp">
+
+        </ListView>
+
+        <ListView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/Player2Guessesprint"
+            android:layout_marginLeft="3dp"/>
+        <!--<LinearLayout
+            android:id="@+id/LinearLayoutP1"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Player1Guessesprint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutP2"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Player2Guessesprint"/>
+        </LinearLayout>-->
+    </LinearLayout>
+    <TextView
+        android:id="@+id/winner"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:text="Guess who'll be the winner"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="401dp"
+        android:layout_above="@+id/start"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp" />
+
+
+
+
+
+</RelativeLayout>
